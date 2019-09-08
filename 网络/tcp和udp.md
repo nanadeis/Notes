@@ -97,10 +97,19 @@ TIME_WAIT时延和端口耗尽
 
 
 # 三次握手的状态  
+主动打开方，发送SYN，进入SYN_SENT状态  
+被动打开方，收到SYN，发送SYN+ACK，从LISTEN进入SYN_RCVD状态  
+主动打开方，接收SYN+ACK，发送ACK， 进入ESTABLISHED状态  
+被动打开方，接收ACK，进入ESTABLISHED状态  
 
 
 # 四次挥手的状态  
-
+主动关闭方发送FIN，进入FIN_WAIT_1状态  
+被动关闭方接受FIN，发送ACK，进入CLOSE_WAIT状态  
+主动关闭方接受ACK，进入FIN_WAIT_2状态  
+被动关闭方发送FIN， 进入LAST_ACK状态  
+主动关闭方接受FIN，发送ACK，进入TIME_WAIT状态  
+被动关闭方接受ACK，进入CLOSED状态  
 
 # 报文格式
 ## TCP报头  
