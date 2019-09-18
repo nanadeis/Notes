@@ -59,4 +59,7 @@ ln source dist
 # linux 删除文件的原理  
 当某个进程打开了一个文件，此时用rm删除该文件，可以删除不会报错。用losf查看打开了该文件的进程，还能看到那个文件但是有个（delete）  
 只有i_count和i_nlink同时为0才会删除硬盘上的data block   
- 
+
+
+# VFS和ext2文件系统  
+

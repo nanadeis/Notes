@@ -92,6 +92,11 @@ TCP慢启动拥塞控制
 TIME_WAIT时延和端口耗尽  
 
 
+# 控制connect的等待时间  
+connect的超时时间是系统内核规定的，不能使用setSocketOpt来设置  
+1. 使用select，将connect设为非阻塞的  
+2. 用alarm  
+
 # SYN Flood  
 
 
